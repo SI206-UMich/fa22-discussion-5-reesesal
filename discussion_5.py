@@ -56,6 +56,15 @@ class Warehouse:
 	
 	# Returns the item in the warehouse with the highest price
 	def get_max_price(self):
+		if len(self.items) == 0:
+			return None
+		maxItem = None
+		maxPrice = 0
+		for item in self.items:
+			if item.price > maxPrice:
+				maxPrice = item.price
+				maxItem = item
+		return maxItem
 		pass	
 
 
