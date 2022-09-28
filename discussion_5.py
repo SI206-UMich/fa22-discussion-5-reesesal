@@ -132,6 +132,12 @@ class TestAllMethods(unittest.TestCase):
 		self.warehouse2.add_item(self.item3)
 		self.warehouse2.add_item(self.item4)
 		self.assertEqual(self.warehouse2.get_max_price(), self.item4, "item 4 is max")
+
+		self.warehouse3 = Warehouse()
+		self.warehouse2.add_item(self.item3)
+		self.warehouse2.add_item(self.item3)
+		self.warehouse2.add_item(self.item5)
+		self.assertEqual(self.warehouse2.get_max_price(), self.item5, "item 5 is max")
 		pass
 		
 
